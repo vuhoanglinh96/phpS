@@ -56,10 +56,6 @@ class PageController extends Controller
         if (Auth::guest()) return Redirect::to('/homepage');
         
         $type = DB::table('questionType')->get();
-      
-       
-        echo $type;
-
         return view("templates.addQuestion")->with([
             'type' => $type
             // 'typeList' => $typeList

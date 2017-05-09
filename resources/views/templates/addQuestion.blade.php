@@ -27,7 +27,7 @@
 
 				<div class="form-group{{ $errors->has('question_name') ? ' has-error' : '' }}">
 					{!! Form::label('question_name', 'Câu hỏi:') !!}
-					{!! Form::text('question_name', $value = null, ['class' => 'form-control']) !!}
+					{!! Form::textarea('question_name', $value = null, ['class' => 'form-control']) !!}
 					@if ($errors->has('question_name'))
                         <span class="help-block">
                             <strong>{{ $errors->first('question_name') }}</strong>

@@ -15,7 +15,7 @@
 			<div class="row">
 				<div class="col-md-12">
 					<h3 class="text-center text-success">
-						{{ $question->question_name }}
+						{!! nl2br(e($question->question_name)) !!}
 					</h3>
 				</div>
 			</div>
