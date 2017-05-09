@@ -48,7 +48,7 @@
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
 							            	{!! Form::open(['method' => 'get','url' => "list/$type"]) !!}
-							            	{!! Form::hidden('qcount', $qcount+1) !!}
+							            	
 							                <button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
 							                </button>
