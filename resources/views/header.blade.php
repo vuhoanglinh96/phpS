@@ -11,16 +11,18 @@
 					<div class="col-md-8">
 						<ul class="nav nav-pills">
 							<li class="active">
-								<a href="{{ url('/home') }}">Trang chủ</a>
+								<a href="{{ url('/homepage') }}">Trang chủ</a>
 							</li>
 							<li>
 								<a href="{{ url('/user') }}">Thành viên</a>
 							</li>
-							<li class="disabled">
-								<a href="#">Messages</a>
+							@if (Auth::user()->id_decentralization != 3)
+							<li>
+								<a href="{{ url('/addQuestion') }}">Thêm câu hỏi</a>
 							</li>
+							@endif
 							<li class="dropdown pull-right">
-								 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Xin chào, {{ Auth::user()->name }}<strong class="caret"></strong></a>
+								 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Xin chào, {{ Auth::user()->name }} <strong class="caret"></strong></a>
 								<ul class="dropdown-menu">
 									<li>
 										<a href="#">Cập nhật tài khoản</a>

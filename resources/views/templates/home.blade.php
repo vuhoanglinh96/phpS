@@ -96,7 +96,7 @@
 					                        data-dismiss="modal">
 					                            Trở về
 					                </button>
-					                <button type="button" class="btn btn-success">
+					                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signUp" data-dismiss="modal">
 					                    Chưa có tài khoản? Đăng ký ngay
 					                </button>
 					            </div>
@@ -199,7 +199,7 @@
 					                        data-dismiss="modal">
 					                            Trở về
 					                </button>
-					                <button type="button" class="btn btn-success">
+					                <button type="button" class="btn btn-success" data-toggle="modal" data-target="#signIn" data-dismiss="modal">
 					                    Đã có tài khoản? Đăng nhập
 					                </button>
 					            </div>

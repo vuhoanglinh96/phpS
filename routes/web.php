@@ -22,7 +22,6 @@ Route::get('/homepage', 'PageController@home');
 Route::get('/list', 'PageController@list');
 Route::get('/list/{id_type}', ['as' => 'question', 'uses' =>'PageController@questionType1']);
 Route::get('/user', 'PageController@user');
-Route::get('/questionList', 'PageController@questionList');
 Route::get('/addQuestion', 'PageController@addQuestion');
 
 // Route::get('/homepage', function() {
@@ -42,6 +41,12 @@ Auth::routes();
 
 // Question
 Route::post('/addQuestion/add', 'QuestionController@add');
+Route::post('delete/{id_question}', [ 'as' => 'delete', 'uses' => 'QuestionController@delete']);
+Route::get('/questionList/{id_type}', [ 'as' => 'questionList', 'uses' => 'QuestionController@questionList']);
 
+//User Management
+Route::get('setAdmin/{id_user}',[ 'as' => 'setAdmin', 'uses' =>'UserController@setAdmin' ]);
+Route::get('setQuestionaire/{id_user}',[ 'as' => 'setQuestionaire', 'uses' =>'UserController@setQuestionaire' ]);
+Route::get('deleteUser/{id_user}',[ 'as' => 'deleteUser', 'uses' =>'UserController@deleteUser' ]);
 
 

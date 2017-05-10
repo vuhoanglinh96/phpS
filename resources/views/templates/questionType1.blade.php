@@ -28,7 +28,7 @@
 								{{ $question->answer_A }}
 							</button> 
 
-							<div class="modal fade" {{-- data-backdrop="static" data-keyboard="false" --}} id="answer_A" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" data-backdrop="static" data-keyboard="false" id="answer_A" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							    <div class="modal-dialog">
 							        <div class="modal-content">
 							            <!-- Modal Body -->
@@ -47,12 +47,15 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							            	{!! Form::open(['method' => 'get','url' => "list/$type"]) !!}
-							            	
-							                <button type="submit" class="btn btn-success" >
+							  {{--           	{!! Form::open(['method' => 'get','url' => "list/$type"]) !!} --}}
+							            	<a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+					                        
+					                            Trở về trang chọn câu hỏi
+					                		</button></a>
+							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
-							                </button>
-							                {!! Form::close()!!}
+							                </button></a>
+							                {{-- {!! Form::close()!!} --}}
 							            </div>
 							        </div>
 							    </div>
@@ -64,7 +67,7 @@
 								{{ $question->answer_B }}
 							</button> 
 
-							<div class="modal fade" id="answer_B" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" data-backdrop="static" data-keyboard="false" id="answer_B" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							    <div class="modal-dialog">
 							        <div class="modal-content">
 							            <!-- Modal Body -->
@@ -83,9 +86,13 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <button type="button" class="btn btn-success">
+							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+					                        
+					                            Trở về trang chọn câu hỏi
+					                		</button></a>
+							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
-							                </button>
+							                </button></a>
 							            </div>
 							        </div>
 							    </div>
@@ -100,7 +107,7 @@
 								{{ $question->answer_C }}
 							</button> 
 
-							<div class="modal fade" id="answer_C" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" data-backdrop="static" data-keyboard="false" id="answer_C" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							    <div class="modal-dialog">
 							        <div class="modal-content">
 							            <!-- Modal Body -->
@@ -119,9 +126,13 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <button type="button" class="btn btn-success">
+							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+					                        
+					                            Trở về trang chọn câu hỏi
+					                		</button></a>
+							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
-							                </button>
+							                </button></a>
 							            </div>
 							        </div>
 							    </div>
@@ -133,7 +144,7 @@
 								{{ $question->answer_D }}
 							</button> 
 
-							<div class="modal fade" id="answer_D" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							<div class="modal fade" data-backdrop="static" data-keyboard="false" id="answer_D" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							    <div class="modal-dialog">
 							        <div class="modal-content">
 							            <!-- Modal Body -->
@@ -152,9 +163,13 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <button type="button" class="btn btn-success">
+							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+					                        
+					                            Trở về trang chọn câu hỏi
+					                		</button></a>
+							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
-							                </button>
+							                </button></a>
 							            </div>
 							        </div>
 							    </div>

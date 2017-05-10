@@ -23,6 +23,11 @@
 								<p class="text-center">
 									<a href="{{ url ('/list/'.$t->id_type) }}" id="question">{{ $t->type }}</a>
 								</p>
+								@if (Auth::user()->id_decentralization!=3)
+								<p class="text-center">
+									<a href="{{ url ('/questionList/'.$t->id_type) }}" id="question">Xem câu hỏi</a>
+								</p>
+								@endif
 							</div>
 						@endif
 					@endforeach

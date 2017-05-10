@@ -24,5 +24,19 @@ class QuestionController extends Controller
     	return redirect("addQuestion");
     }
 
+    public function questionList($id_type) {
+        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/homepage');
+        $question = DB::table('questionaires')
+            ->where('id_type', '=', $id_type)
+            ->get();
+        return view("templates.questionList")->with([
+            'question' => $question
+        ]);
+    }
+
+    public function delete($id_question){
+        DB::table('questionaires')->where('id_question', '=', $id_question)->delete();
+        return redirect("questionList/$id_question");
+    }
 
 }

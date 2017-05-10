@@ -44,17 +44,17 @@ class PageController extends Controller
 
     public function user() {
         if (Auth::guest()) return Redirect::to('/homepage');
-        return view("templates.user");
+        $user = DB::table('users')->get();
+        return view("templates.user")->with([
+            'user' => $user
+        ]);
     }
 
-    public function questionList() {
-        if (Auth::guest()) return Redirect::to('/homepage');
-        return view("templates.questionList");
-    }
+    
 
     public function addQuestion() {
-        if (Auth::guest()) return Redirect::to('/homepage');
-        
+        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/homepage');
+
         $type = DB::table('questionType')->get();
         return view("templates.addQuestion")->with([
             'type' => $type
