@@ -7,7 +7,7 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+			<img alt="Logo" src="image/phpstorm-logo.jpg">
 		</div>
 	</div>
 	<div class="row">

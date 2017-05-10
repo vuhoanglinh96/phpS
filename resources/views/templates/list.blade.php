@@ -19,7 +19,9 @@
 					@foreach($type as $t)
 						@if( $c->level == $t->level )
 							<div class="col-md-@php echo (12/$c->count) @endphp">
-								<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/" class="img-circle" style="display: block; margin-left: auto; margin-right: auto;">
+								<a href="{{ url ('/list/'.$t->id_type) }}" id="question">
+									<img alt="Logo" src="{{ $t->path }}" class="img-circle" style="display: block; margin-left: auto; margin-right: auto;">
+								</a>
 								<p class="text-center">
 									<a href="{{ url ('/list/'.$t->id_type) }}" id="question">{{ $t->type }}</a>
 								</p>

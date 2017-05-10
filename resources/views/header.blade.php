@@ -6,12 +6,12 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-4">
-						<img alt="Bootstrap Image Preview" src="http://lorempixel.com/140/140/">
+						<img alt="Logo" src="image/phpstorm-logo.jpg">
 					</div>
 					<div class="col-md-8">
 						<ul class="nav nav-pills">
 							<li class="active">
-								<a href="{{ url('/homepage') }}">Trang chủ</a>
+								<a href="{{ url('/') }}">Trang chủ</a>
 							</li>
 							<li>
 								<a href="{{ url('/user') }}">Thành viên</a>
