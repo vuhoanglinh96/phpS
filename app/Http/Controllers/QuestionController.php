@@ -25,7 +25,7 @@ class QuestionController extends Controller
     }
 
     public function questionList($id_type) {
-        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/homepage');
+        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/');
         $question = DB::table('questionaires')
             ->where('id_type', '=', $id_type)
             ->get();

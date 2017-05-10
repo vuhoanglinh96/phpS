@@ -16,7 +16,7 @@ class PageController extends Controller
     }
 
     public function list() {
-        if (Auth::guest()) return Redirect::to('/homepage');
+        if (Auth::guest()) return Redirect::to('/');
         $type = DB::table('questionType')->get();
 
         $count = DB::table('questionType')
@@ -30,7 +30,7 @@ class PageController extends Controller
     }
 
     public function questionType1(Request $request,$type) {
-        if (Auth::guest()) return Redirect::to('/homepage');
+        if (Auth::guest()) return Redirect::to('/');
         $input = $request->all();
         $question = DB::table('questionaires')
             ->where('id_type', '=', $type)->inRandomOrder()->first();
@@ -43,7 +43,7 @@ class PageController extends Controller
     }
 
     public function user() {
-        if (Auth::guest()) return Redirect::to('/homepage');
+        if (Auth::guest()) return Redirect::to('/');
         $user = DB::table('users')->get();
         return view("templates.user")->with([
             'user' => $user
@@ -53,7 +53,7 @@ class PageController extends Controller
     
 
     public function addQuestion() {
-        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/homepage');
+        if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/');
 
         $type = DB::table('questionType')->get();
         return view("templates.addQuestion")->with([

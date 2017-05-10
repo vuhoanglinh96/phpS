@@ -11,14 +11,12 @@
 |
 */
 
-Session::put('qcount', 0);
-
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 // Access from url
-Route::get('/homepage', 'PageController@home');
+Route::get('/', 'PageController@home');
 Route::get('/list', 'PageController@list');
 Route::get('/list/{id_type}', ['as' => 'question', 'uses' =>'PageController@questionType1']);
 Route::get('/user', 'PageController@user');
