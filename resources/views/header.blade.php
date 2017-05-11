@@ -24,12 +24,13 @@
 							<li class="dropdown pull-right">
 								 <a href="#" data-toggle="dropdown" class="dropdown-toggle">Xin chào, {{ Auth::user()->name }} <strong class="caret"></strong></a>
 								<ul class="dropdown-menu">
-									<li>
+									{{-- <li>
 										<a href="#">Cập nhật tài khoản</a>
 									</li>
 									<li class="divider">
 									</li>
-									<li>
+ --}}									
+ 									<li>
 										<a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
