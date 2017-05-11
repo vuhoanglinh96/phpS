@@ -6,7 +6,7 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-4">
-						<img alt="Logo" src="image/phpstorm-logo.jpg">
+						<img alt="Logo" src="https://lh3.googleusercontent.com/X8jcrVDwxOzcsDTvCQF_u59JlL8kfehiOFc5SlcHcPj_bNXL1zTIu3Q3f1pod1UqPFJp4FD4tV2jEyU=w1280-h703" style="display: block; margin-left: auto; margin-right: auto;">
 					</div>
 					<div class="col-md-8">
 						<ul class="nav nav-pills">

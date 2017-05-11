@@ -7,7 +7,7 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<img alt="Logo" src="image/phpstorm-logo.jpg">
+			<img align="center" alt="Logo" src="https://lh3.googleusercontent.com/X8jcrVDwxOzcsDTvCQF_u59JlL8kfehiOFc5SlcHcPj_bNXL1zTIu3Q3f1pod1UqPFJp4FD4tV2jEyU=w1280-h703">
 		</div>
 	</div>
 	<div class="row">

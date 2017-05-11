@@ -9,7 +9,11 @@
         "doctrine/dbal": "^2.5",
         "laravel/framework": "5.4.*",
         "laravel/tinker": "~1.0",
-        "laravelcollective/html": "^5.4"
+        "laravelcollective/html": "^5.4",
+        "silex/silex": "^2.0.4",
+        "monolog/monolog": "^1.22",
+        "twig/twig": "^2.0",
+        "symfony/twig-bridge": "^3"
     },
     "require-dev": {
         "behat/behat": "^3.3",
@@ -18,7 +22,8 @@
         "fzaninotto/faker": "~1.4",
         "laracasts/behat-laravel-extension": "^1.0",
         "mockery/mockery": "0.9.*",
-        "phpunit/phpunit": "~5.7"
+        "phpunit/phpunit": "~5.7",
+        "heroku/heroku-buildpack-php": "*"
     },
     "autoload": {
         "classmap": [
