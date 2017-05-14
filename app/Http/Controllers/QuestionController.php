@@ -34,9 +34,9 @@ class QuestionController extends Controller
         ]);
     }
 
-    public function delete($id_question){
+    public function delete($id_type, $id_question){
         DB::table('questionaires')->where('id_question', '=', $id_question)->delete();
-        return redirect("questionList/$id_question");
+        return redirect("questionList/$id_type");
     }
 
 }

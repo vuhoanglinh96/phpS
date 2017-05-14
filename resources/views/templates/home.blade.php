@@ -7,7 +7,7 @@
     <div class="container-fluid">
 	<div class="row">
 		<div class="col-md-12">
-			<img align="center" alt="Logo" src="https://lh3.googleusercontent.com/X8jcrVDwxOzcsDTvCQF_u59JlL8kfehiOFc5SlcHcPj_bNXL1zTIu3Q3f1pod1UqPFJp4FD4tV2jEyU=w1280-h703">
+			<img align="center" alt="Logo" src="http://i.imgur.com/34jIMZ1.jpg">
 		</div>
 	</div>
 	<div class="row">
@@ -49,9 +49,9 @@
 					                	{{ csrf_field() }}
 					                  <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 					                    <label  class="col-sm-2 control-label"
-					                              for="email">Email</label>
+					                              for="sign-in-email">Email</label>
 					                    <div class="col-sm-10">
-					                        <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
+					                        <input id="sign-in-email" type="email" class="form-control" name="email" value="{{ old('email') }}" required autofocus>
 
 					                        @if ($errors->has('email'))
 			                                    <span class="help-block">
@@ -62,9 +62,9 @@
 					                  </div>
 					                  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 					                    <label class="col-sm-2 control-label"
-					                          for="password" >Mật khẩu</label>
+					                          for="sign-in-password" >Mật khẩu</label>
 					                    <div class="col-sm-10">
-					                        <input id="password" type="password" class="form-control" name="password" required>
+					                        <input id="sign-in-password" type="password" class="form-control" name="password" required>
 
 				                            @if ($errors->has('password'))
 			                                    <span class="help-block">
@@ -128,10 +128,10 @@
 					                	{{ csrf_field() }}
 
 					                	<div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-				                            <label for="name" class="col-sm-2 control-label">Họ tên</label>
+				                            <label for="sign-up-name" class="col-sm-2 control-label">Họ tên</label>
 
 				                            <div class="col-md-10">
-				                                <input id="name" type="text" class="form-control" placeholder="Tên" name="name" value="{{ old('name') }}" required autofocus>
+				                                <input id="sign-up-name" type="text" class="form-control" placeholder="Tên" name="name" value="{{ old('name') }}" required autofocus>
 
 				                                @if ($errors->has('name'))
 				                                    <span class="help-block">
@@ -143,9 +143,9 @@
 
 					                  <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
 					                    <label  class="col-sm-2 control-label"
-					                              for="email">Email</label>
+					                              for="sign-up-email">Email</label>
 					                    <div class="col-sm-10">
-					                        <input id="email" type="email" class="form-control" 
+					                        <input id="sign-up-email" type="email" class="form-control" 
 					                       		placeholder="Email" name="email" value="{{ old('email') }}" required/>
 
 					                        @if ($errors->has('email'))
@@ -157,9 +157,9 @@
 					                  </div>
 					                  <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
 					                    <label class="col-sm-2 control-label"
-					                          for="password" >Mật khẩu</label>
+					                          for="sign-up-password" >Mật khẩu</label>
 					                    <div class="col-sm-10">
-					                        <input id="password" type="password" class="form-control" placeholder="Password" name="password" required />
+					                        <input id="sign-up-password" type="password" class="form-control" placeholder="Password" name="password" required />
 
 					                        @if ($errors->has('password'))
 			                                    <span class="help-block">
@@ -170,24 +170,15 @@
 					                  </div>
 					                  <div class="form-group">
 					                    <label class="col-sm-2 control-label"
-					                          for="password-confirm" >Nhập lại mật khẩu</label>
+					                          for="sign-up-password-confirm" >Nhập lại mật khẩu</label>
 					                    <div class="col-sm-10">
 					                        <input type="password" class="form-control"
-					                            id="password-confirm" placeholder="Password" name="password_confirmation" required/>
+					                            id="sign-up-password-confirm" placeholder="Password" name="password_confirmation" required/>
 					                    </div>
 					                  </div>
 					                  <div class="form-group">
 					                    <div class="col-sm-offset-2 col-sm-10">
-					                      <div class="checkbox">
-					                        <label>
-					                            <input type="checkbox"/>Tích vào đây để đồng ý với điều khoản sử dụng của chúng tôi
-					                        </label>
-					                      </div>
-					                    </div>
-					                  </div>
-					                  <div class="form-group">
-					                    <div class="col-sm-offset-2 col-sm-10">
-					                      <button type="submit" class="btn btn-success">Đăng ký</button>
+					                      <button type="submit" class="btn btn-success" id="signup">Đăng ký</button>
 					                    </div>
 					                  </div>
 					                </form>

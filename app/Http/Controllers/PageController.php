@@ -9,13 +9,12 @@ use Redirect;
 
 class PageController extends Controller
 {
-    //
     public function home() {
-        if (Auth::check()) return Redirect::to('/list');
+        if (Auth::check()) return Redirect::to('/category');
     	return view("templates.home");
     }
 
-    public function list() {
+    public function category() {
         if (Auth::guest()) return Redirect::to('/');
         $type = DB::table('questionType')->get();
 
@@ -23,7 +22,7 @@ class PageController extends Controller
             ->select(DB::raw('level, COUNT(*) as count'))
             ->groupBy('level')->get();
 
-    	return view("templates.list")->with([
+    	return view("templates.category")->with([
             'type' => $type, 
             'count' => $count
         ]);
@@ -34,12 +33,11 @@ class PageController extends Controller
         $input = $request->all();
         $question = DB::table('questionaires')
             ->where('id_type', '=', $type)->inRandomOrder()->first();
-        // echo $input;
+        
     	return view("templates.questionType1")->with([
             'question' => $question,
             'type' => $type
         ]);
-        // return $question;
     }
 
     public function user() {
@@ -50,15 +48,11 @@ class PageController extends Controller
         ]);
     }
 
-    
-
     public function addQuestion() {
         if (Auth::guest() || Auth::user()->id_decentralization == 3) return Redirect::to('/');
-
         $type = DB::table('questionType')->get();
         return view("templates.addQuestion")->with([
             'type' => $type
-            // 'typeList' => $typeList
         ]);
     }
 }

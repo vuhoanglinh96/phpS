@@ -19,15 +19,15 @@
 					@foreach($type as $t)
 						@if( $c->level == $t->level )
 							<div class="col-md-@php echo (12/$c->count) @endphp">
-								<a href="{{ url ('/list/'.$t->id_type) }}" id="question">
+								<a href="{{ url ('/category/'.$t->id_type) }}" id="questionImage">
 									<img alt="Logo" src="{{ $t->path }}" class="img-circle" style="display: block; margin-left: auto; margin-right: auto;">
 								</a>
 								<p class="text-center">
-									<a href="{{ url ('/list/'.$t->id_type) }}" id="question">{{ $t->type }}</a>
+									<a href="{{ url ('/category/'.$t->id_type) }}" id="question">{{ $t->type }}</a>
 								</p>
 								@if (Auth::user()->id_decentralization!=3)
 								<p class="text-center">
-									<a href="{{ url ('/questionList/'.$t->id_type) }}" id="question">Xem câu hỏi</a>
+									<a href="{{ url ('/questionList/'.$t->id_type) }}" id="questionList">Xem câu hỏi</a>
 								</p>
 								@endif
 							</div>

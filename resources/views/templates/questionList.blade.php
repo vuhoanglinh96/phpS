@@ -36,8 +36,8 @@
 							{{ $q->answer_D }}
 						</li>
 					</ol> 
-					{!! Form::open(['method' => 'post','url' => "delete/$q->id_question"]) !!}
-					<button type="submit" class="btn btn-danger">
+					{!! Form::open(['method' => 'post','url' => "delete/$q->id_type/$q->id_question"]) !!}
+					<button type="submit" class="btn btn-danger" id="deleteConfirmation" title = "{{ $q->question_name }}">
 						Xóa câu hỏi
 					</button>
 					{!! Form::close()!!}

@@ -12,13 +12,13 @@
 */
 
 // Route::get('/', function () {
-//     return view('welcome');
+//     return view('templates.home');
 // });
 
 // Access from url
 Route::get('/', 'PageController@home');
-Route::get('/list', 'PageController@list');
-Route::get('/list/{id_type}', ['as' => 'question', 'uses' =>'PageController@questionType1']);
+Route::get('/category', 'PageController@category');
+Route::get('/category/{id_type}', ['as' => 'question', 'uses' =>'PageController@questionType1']);
 Route::get('/user', 'PageController@user');
 Route::get('/addQuestion', 'PageController@addQuestion');
 
@@ -39,7 +39,7 @@ Auth::routes();
 
 // Question
 Route::post('/addQuestion/add', 'QuestionController@add');
-Route::post('delete/{id_question}', [ 'as' => 'delete', 'uses' => 'QuestionController@delete']);
+Route::post('delete/{id_type}/{id_question}', [ 'as' => 'delete', 'uses' => 'QuestionController@delete']);
 Route::get('/questionList/{id_type}', [ 'as' => 'questionList', 'uses' => 'QuestionController@questionList']);
 
 //User Management

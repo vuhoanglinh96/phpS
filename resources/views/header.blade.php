@@ -6,19 +6,19 @@
 			<div class="col-md-12">
 				<div class="row">
 					<div class="col-md-4">
-						<img alt="Logo" src="https://lh3.googleusercontent.com/X8jcrVDwxOzcsDTvCQF_u59JlL8kfehiOFc5SlcHcPj_bNXL1zTIu3Q3f1pod1UqPFJp4FD4tV2jEyU=w1280-h703" style="display: block; margin-left: auto; margin-right: auto;">
+						<img alt="Logo" src="http://i.imgur.com/34jIMZ1.jpg" style="display: block; margin-left: auto; margin-right: auto;">
 					</div>
 					<div class="col-md-8">
 						<ul class="nav nav-pills">
 							<li class="active">
-								<a href="{{ url('/') }}">Trang chủ</a>
+								<a href="{{ url('/') }}" title="homepage">Trang chủ</a>
 							</li>
 							<li>
-								<a href="{{ url('/user') }}">Thành viên</a>
+								<a href="{{ url('/user') }}" title="user">Thành viên</a>
 							</li>
 							@if (Auth::user()->id_decentralization != 3)
 							<li>
-								<a href="{{ url('/addQuestion') }}">Thêm câu hỏi</a>
+								<a href="{{ url('/addQuestion') }}" title="addQuestion">Thêm câu hỏi</a>
 							</li>
 							@endif
 							<li class="dropdown pull-right">

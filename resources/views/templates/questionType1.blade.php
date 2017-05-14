@@ -47,12 +47,12 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							  {{--           	{!! Form::open(['method' => 'get','url' => "list/$type"]) !!} --}}
-							            	<a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+							  {{--           	{!! Form::open(['method' => 'get','url' => "category/$type"]) !!} --}}
+							            	<a href="{{ url('/category') }}" title=""><button type="button" class="btn btn-default">
 					                        
 					                            Trở về trang chọn câu hỏi
 					                		</button></a>
-							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
+							                <a href="{!! url('/category/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
 							                </button></a>
 							                {{-- {!! Form::close()!!} --}}
@@ -86,11 +86,11 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+							                <a href="{{ url('/category') }}" title=""><button type="button" class="btn btn-default">
 					                        
 					                            Trở về trang chọn câu hỏi
 					                		</button></a>
-							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
+							                <a href="{!! url('/category/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
 							                </button></a>
 							            </div>
@@ -126,11 +126,11 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+							                <a href="{{ url('/category') }}" title=""><button type="button" class="btn btn-default">
 					                        
 					                            Trở về trang chọn câu hỏi
 					                		</button></a>
-							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
+							                <a href="{!! url('/category/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
 							                </button></a>
 							            </div>
@@ -163,11 +163,11 @@
 							            @endif
 							            <!-- Modal Footer -->
 							            <div class="modal-footer">
-							                <a href="{{ url('/list') }}" title=""><button type="button" class="btn btn-default">
+							                <a href="{{ url('/category') }}" title=""><button type="button" class="btn btn-default">
 					                        
 					                            Trở về trang chọn câu hỏi
 					                		</button></a>
-							                <a href="{!! url('/list/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
+							                <a href="{!! url('/category/'.$type) !!}" title=""><button type="submit" class="btn btn-success" >
 							                    Câu hỏi tiếp theo
 							                </button></a>
 							            </div>
